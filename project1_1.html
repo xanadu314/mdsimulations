@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>project1_1</title>
+<style type="text/css">
+<!--
+.STYLE6 {color: #000000}
+#Layer7 {	position:fixed;
+	width:590px;
+	height:443px;
+	z-index:6;
+	left: 30%;
+	top: 10%;
+	visibility: hidden;
+}
+#Layer8 {	position:fixed;
+	width:698px;
+	height:368px;
+	z-index:6;
+	left: 30%;
+	top: 10%;
+	visibility: hidden;
+}
+#Layer9 {	position:fixed;
+	width:200px;
+	height:115px;
+	z-index:6;
+	left: 30%;
+	top: 50%;
+	visibility: hidden;
+}
+#Layer14 {	position:fixed;
+	width:200px;
+	height:115px;
+	z-index:6;
+	left: 30%;
+	top: 10%;
+	visibility: hidden;
+}
+#Layer15 {
+	position:fixed;
+	width:200px;
+	height:115px;
+	z-index:6;
+	left: 30%;
+	top: 50%;
+	visibility: hidden;
+}
+#Layer10 {
+	position:fixed;
+	width:200px;
+	height:115px;
+	z-index:6;
+	left: 30%;
+	top: 10%;
+	visibility: hidden;
+}
+#Layer11 {
+	position:fixed;
+	width:200px;
+	height:115px;
+	z-index:6;
+	left: 30%;
+	top: 10%;
+	visibility: hidden;
+}
+#Layer12 {
+	position:fixed;
+	width:200px;
+	height:115px;
+	z-index:6;
+	left: 30%;
+	top: 10%;
+	visibility: hidden;
+}
+#Layer13 {	position:fixed;
+	width:200px;
+	height:115px;
+	z-index:6;
+	left: 30%;
+	top: 10%;
+	visibility: hidden;
+}
+#Layer1 {
+	margin-left: 120px;
+	margin-top:	auto;
+	margin-right: 120px;
+	margin-bottom:auto;
+}
+body {
+	background-color: #EAE7DF;
+}
+p {
+	margin-top: 0;
+}
+.STYLE7 {font-weight: bold}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v6.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+//-->
+</script>
+</head>
+
+<body>
+<div id="Layer1">
+  <h1>Introduction </h1>
+  <p>Homology modeling is a technique used to approximate the 3D structure of a protein when no experimentally determined structure exists. It operates under the principle that protein tertiary structure is better conserved than amino acid sequence, and proteins that share high sequence homology should therefore also share high structural homology. The protein being modeled is called the target protein. A protein for which there is an experimentally determined structure that is used to model the target is called a template protein. Template proteins must share high sequence homology with the target protein, so that their 3D structures can be expected to be very similar. The amino acid sequence of the target protein is mapped onto the 3D structure of the template to create an approximate model. This is a homology model. </p>
+  <h2>Workstation setup</h2>
+  <p>It is important to organize where files are stored at each step in the project process in order to reduce clutter and prevent accidental overwriting. For this purpose, we will create separate directories for each part of the project. open a terminal window and use the mkdir command to make the following directories, avoid using spaces in file name, and note that all file names are care sensitive</p>
+  <p class="STYLE7"> $ mkdir homology_modeling </p>
+  <p><strong>$ mkdir md_simulations </strong></p>
+  <p><strong>$ mkdir hm_analysis </strong></p>
+  <h2>Acquire target protein sequence and reference pdb files </h2>
+  <p>The target protein for this semester is Fatty Acid Binding Protein(FABP),which has PDB ID #2HMB,everyone will be modeling this protein.</p>
+  <table width="100%" height="506" border="0">
+    <tr>
+      <td width="20%" height="155" valign="top"><img src="Project_01.png" width="224" height="121" onmousemove="MM_showHideLayers('Layer7','','show')" onmouseout="MM_showHideLayers('Layer7','','hide')" /></td>
+      <td width="80%" valign="top">1. <span class="STYLE6">Go to the RCSB protein Data Bank website and </span>search for PDB ID #2HMB.
+        <div id="Layer7"><img src="Project_01.png" width="808" height="438" /></div></td>
+    </tr>
+    <tr>
+      <td valign="top"><img src="Project_02.png" width="225" height="119" onmousemove="MM_showHideLayers('Layer8','','show')" onmouseout="MM_showHideLayers('Layer8','','hide')" /></td>
+      <td valign="top">2.
+        <div id="Layer8"><img src="Project_02.png" width="780" height="414" /></div>
+        From left menu,download FASTA sequence and PDB text file.</td>
+    </tr>
+    <tr>
+      <td valign="top"><img src="Project_03.PNG" width="225" height="37" onmousemove="MM_showHideLayers('Layer9','','show')" onmouseout="MM_showHideLayers('Layer9','','hide')" /></td>
+      <td valign="top"><p>3. Change the name of FASTA sequence file to have .fasts as its extention and save this and the PDB file to your homology_modeling directory.</p>
+          <p><strong> $ mv 2HMB.fasta.txt 2HMB.fasta</strong></p>
+        <p><strong> $ mv 2HMB.fasts homology_modeling</strong></p>
+        <div id="Layer9"><img src="Project_03.PNG" width="732" height="122" /></div>
+        <p><strong>$ mv 2HMB.pdb homology_modeling </strong></p></td>
+    </tr>
+  </table>
+  <h2><strong>Choose a template protein</strong></h2>
+  <p>Everyone will choose a different template protein to use in modeling FABP.Potential templates can be identified by performing a BLAST search on the target protein to produce a scored list of proteins with highly similar sequences.</p>
+  <table width="100%" border="0">
+    <tr>
+      <td width="20%" valign="top"><img src="Project_04.png" width="217" height="82" onmousemove="MM_showHideLayers('Layer10','','show')" onmouseout="MM_showHideLayers('Layer10','','hide')" /></td>
+      <td width="80%" valign="top">1. Go to the NCBI BLAST website and click protein blast.
+        <div id="Layer10"><img src="Project_04.png" width="804" height="309" /></div></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td valign="top"><p>2. Open your target FASTA sequence in the vi editor.Highlight and copy</p>
+          <p><strong>$ vi 2HMB.fasta </strong></p></td>
+    </tr>
+    <tr>
+      <td valign="top"><img src="Project_05.png" width="222" height="76" onmousemove="MM_showHideLayers('Layer11','','show')" onmouseout="MM_showHideLayers('Layer11','','hide')" /></td>
+      <td valign="top"><p>3. Paste your target FASTA sequence into the BLAST search field.Select Protein Data Bank proteins(pdb)for </p>
+          <p>thedatabase and make sure blastp (protein-protein BLAST)is selected as the algorithm. Click the BLAST buttom at the bottom to begin your search. </p>
+        <div id="Layer11"><img src="Project_05.png" width="797" height="275" /></div></td>
+    </tr>
+    <tr>
+      <td valign="top"><img src="Project_06.png" width="218" height="109" onmousemove="MM_showHideLayers('Layer12','','show')" onmouseout="MM_showHideLayers('Layer12','','hide')" /></td>
+      <td valign="top">4. This results page displays information about the top alignment hits to   the primary sequence you submitted. A graph shows the distribution of   BLAST scores beginning with those hits that scored 200 points or higher.   Mouse-over each bar to see which protein it corresponds to and click it   to be taken to the protein's entry in the scored list further down the   page. Hits that scored above 200 will likely include other Fatty Acid   Binding Proteins, mutants, and analogs from different species. Those that scored from 80-200 will   reveal more protein diversity. A second scored list containing detailed   alignment information for each hit can be found at the bottom of the   page. Be sure to note what dictates a positive result and how the   identities, positives, and gaps are assigned percentages. Understanding   how the BLAST program scores results (similar sequences) will be   important for discussing the percent similarity of your template to your   target.
+        <div id="Layer12"><img src="Project_06.png" width="772" height="388" /></div></td>
+    </tr>
+    <tr>
+      <td valign="top"><img src="Project_07.png" width="219" height="107" onmousemove="MM_showHideLayers('Layer13','','show')" onmouseout="MM_showHideLayers('Layer13','','hide')" /></td>
+      <td valign="top">5. After you have examined the results page, choose a protein from the list   to serve as your template. A higher BLAST score means a better   template, but we will choose from the intermediate range of 50-100 in   order to test the limits of homology modeling. Report your protein   choice to the TA to confirm that everyone is assigned a unique template.   Save the BLAST results page for your records.
+        <div id="Layer13"><img src="Project_07.png" width="540" height="265" /></div></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <h2>Acquire template protein sequence and reference pdb files</h2>
+  <p>Repeat the steps for acquiring target protein files to get template   protein files. PDB ID# 2FLJ is used as an example in this tutorial.</p>
+  <table width="100%" border="0">
+    <tr>
+      <td width="20%" valign="top"><img src="Project_08.png" width="229" height="125" onmousemove="MM_showHideLayers('Layer14','','show')" onmouseout="MM_showHideLayers('Layer14','','hide')" /></td>
+      <td width="80%" valign="top">1. return to the RCSB Protein Data Bank website and search for the PDB ID # of your template.
+        <div id="Layer14"><img src="Project_08.png" width="819" height="453" /></div></td>
+    </tr>
+    <tr>
+      <td valign="top">&nbsp;</td>
+      <td valign="top">2. As before,download FASTA sequence and PDB text file.</td>
+    </tr>
+    <tr>
+      <td valign="top"><img src="Project_09.PNG" width="226" height="38" onmousemove="MM_showHideLayers('Layer15','','show')" onmouseout="MM_showHideLayers('Layer15','','hide')" /></td>
+      <td valign="top"><p>3.  Also change this FASTA sequence to have a .fasta extention and save this and PDB file to your homology modeling directory . </p>
+          <blockquote style="margin-left: 0px;">
+            <blockquote style="margin-left: 0px;">
+              <blockquote style="margin-left: 0px;">
+                <p><strong>$ mv 3FLJ.fasta.txt 2FLJ.fasta</strong></p>
+                <p><strong>$ mv 2FLJ.fasta homology_modeling</strong></p>
+                <p><strong>$ mv 2FLJ.pdb homology_modeling</strong></p>
+                <div id="Layer15"><img src="Project_09.PNG" width="749" height="129" /></div>
+              </blockquote>
+            </blockquote>
+          </blockquote></td>
+    </tr>
+  </table>
+  
+<p style="margin-top: 30px; text-align: right; font-size: 30px"><a href = "project1_2.html">Next</a></p>
+</div>
+</body>
+</html>

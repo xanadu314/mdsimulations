@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>project1_2</title>
+<style type="text/css">
+<!--
+#Layer0 {
+	margin-left: 120px;
+	margin-top:	auto;
+	margin-right: 120px;
+	margin-bottom:auto;
+}
+#Layer1 {
+	position:fixed;
+	width:200px;
+	height:115px;
+	z-index:1;
+	left: 30%;
+	top: 10%;
+	visibility: hidden;
+}
+#Layer2 {
+	position:fixed;
+	width:200px;
+	height:115px;
+	z-index:2;
+	visibility: hidden;
+	left: 30%;
+	top: 10%;;
+}
+#Layer3 {
+	position:fixed;
+	width:200px;
+	height:115px;
+	z-index:3;
+	left: 30%;
+	top: 10%;
+	visibility: hidden;
+}
+#Layer4 {
+	position:fixed;
+	width:200px;
+	height:115px;
+	z-index:4;
+	visibility: hidden;	
+	left: 30%;
+	top: 10%;
+}
+#Layer5 {
+	position:fixed;
+	width:200px;
+	height:115px;
+	z-index:5;
+	visibility: hidden;	
+	left: 30%;
+	top: 10%;
+}
+#Layer6 {
+	position:fixed;
+	width:200px;
+	height:115px;
+	z-index:6;
+	visibility: hidden;	
+	left: 30%;
+	top: 10%;
+}
+#Layer7 {
+	position:fixed;
+	width:200px;
+	height:115px;
+	z-index:7;
+	visibility: hidden;	
+	left: 30%;
+	top: 10%;
+}
+#Layer8 {
+	position:fixed;
+	width:200px;
+	height:115px;
+	z-index:8;
+	visibility: hidden;	
+	left: 30%;
+	top: 10%;
+}
+#Layer9 {
+	position:fixed;
+	width:200px;
+	height:115px;
+	z-index:9;
+	visibility: hidden;	
+	left: 30%;
+	top: 10%;
+}
+body {
+	background-color: #EAE7DF;
+}
+
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v6.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+//-->
+</script>
+</head>
+
+<body>
+<div id="Layer0">
+<h2>Load files, align sequences, and build model in the Molecular Operating Environment</h2>
+<p>A program called MOE will be used to build the homology model using the FASTA sequence of your target and the PDB file of your template. After loading in these files, the sequences are aligned and the target sequence is superposed onto the template structure. From this, MOE will build multiple homology models, minimize them, then select the best one to be the final model.</p>
+<table width="80%" height="1426" border="0" cellpadding="10" cellspacing="5">
+  <tr>
+    <th width="20%" scope="row" valign="top"><img src="openMOE.png" width="255" height="142" onmousemove="MM_showHideLayers('Layer1','','show')" onmouseout="MM_showHideLayers('Layer1','','hide')" /></th>
+    <td width="667" valign="top"> <div id="Layer1"><img src="openMOE.png" width="615" height="343" /></div width = "80">
+    On  Mac, please search &quot;MOE&quot; in the &quot;Launchpad&quot; and then double click it.</td>
+  </tr>
+  <tr>
+    <th scope="row" valign="top"><img src="load_target_fasta.png" width="251" height="81" onmousemove="MM_showHideLayers('Layer2','','show')" onmouseout="MM_showHideLayers('Layer2','','hide')" /></th>
+    <td valign="top"><div id="Layer2"><img src="load_target_fasta.png" width="583" height="384" /></div>
+    In the MOE main window, click <strong>File-&gt;Open</strong>. Navigate to your homology_modeling directory and click<strong> CWD</strong> to set this as your current working directory. Select your target FASTA sequence from the list and click <strong>OK</strong> to exit the window.</td>
+  </tr>
+  <tr>
+    <th scope="row" valign="top"><img src="seq_editor.png" width="254" height="43" onmousemove="MM_showHideLayers('Layer4','','show')" onmouseout="MM_showHideLayers('Layer4','','hide')" /></th>
+    <td valign="top"> <div id="Layer3"><img src="load_tem_pdb.png" width="529" height="383" /></div>
+      <div id="Layer4"><img src="seq_editor.png" width="658" height="245" /></div>
+    Then your target amino acid sequence will be shown in the <strong>sequence editor</strong>.</td>
+  </tr>
+  <tr>
+    <th scope="row" valign="top"><img src="load_tem_pdb.png" width="249" height="179" onmousemove="MM_showHideLayers('Layer3','','show')" onmouseout="MM_showHideLayers('Layer3','','hide')" /></th>
+    <td valign="top">In the MOE main window, click <strong>File-&gt;Open</strong> as before. Select your template PDB and target PDB and then click <strong>OK</strong> to load it into MOE. Keep the defaults in the pop-up window and click <strong>OK</strong>.</td>
+  </tr>
+  <tr>
+    <th scope="row" valign="top"><img src="delete_chains.png" width="247" height="139" onmousemove="MM_showHideLayers('Layer5','','show')" onmouseout="MM_showHideLayers('Layer5','','hide')" /></th>
+    <td valign="top"><div id="Layer5"><img src="delete_chains.png" width="612" height="346" /></div>
+    It is important to delete any superfluous chains, waters, or heteroatoms from your template protein so that they are not considered in the alignment. If you have one of these chains, <strong>left-click</strong> on the chain number in the sequece editor to select it, and click <strong>Delete</strong>.</td>
+  </tr>
+  <tr>
+    <th scope="row" valign="top"><img src="Align.png" width="253" height="92" onmousemove="MM_showHideLayers('Layer6','','show')" onmouseout="MM_showHideLayers('Layer6','','hide')" /></th>
+    <td valign="top"><div id="Layer6"><img src="Align.png" width="784" height="290" /></div>
+    To align the target and template sequences, select both chains and click <strong>Alignment-&gt;Align/Superpose</strong>, click <strong>Align</strong> and <strong>Superpose</strong>. MOE will align the sequences, placing gaps if necessary. Compare the alignment with your saved BLAST search results to confirm that they are the same.</td>
+  </tr>
+  <tr>
+    <th scope="row" valign="top"><img src="homo_mode.png" width="250" height="142" onmousemove="MM_showHideLayers('Layer7','','show')" onmouseout="MM_showHideLayers('Layer7','','hide')" /></th>
+    <td valign="top"><div id="Layer7"><img src="homo_mode.png" width="648" height="370" /></div>
+    To begin modeling, click <strong>Protein-&gt;Homology Mode</strong>l in the sequence editor. The Current System and Output Database fields at the top of this window indicate file names that data will be saved to. The current molecular state (structure AND alignment) will be saved to the MOE file given in Current System. All intermediate models plus a final model (based on the best intermediate model) will be saved to the MDB file given in <strong>Output Database</strong>. Ten intermediate models are generated as a default. Then click<strong> Build</strong>.</td>
+  </tr>
+  <tr>
+    <th scope="row" valign="top"><img src="savefiles.png" width="229" height="253" onmousemove="MM_showHideLayers('Layer8','','show')" onmouseout="MM_showHideLayers('Layer8','','hide')" /></th>
+    <td valign="top"> <div id="Layer8"><img src="savefiles.png" width="450" height="500" /></div>
+    In the MOE main window, you will see the different intermediate models being built and minimized. After 10 models, MOE will refine the final model and leave that as the only remaining structure in the main window. In <strong>Database Viewer</strong> select <strong>Model_1_finaliz</strong> , Click <strong>File-&gt;Save</strong> as and save the final model as both .moe and .pdb files (twice save operation).</td>
+  </tr>
+  <tr>
+    <th scope="row" valign="top"><img src="dele_H.png" width="257" height="113" onmousemove="MM_showHideLayers('Layer9','','show')" onmouseout="MM_showHideLayers('Layer9','','hide')" /></th>
+    <td valign="top"><div id="Layer9"><img src="dele_H.png" width="638" height="282" /></div>
+    Open a new MOE window, Click <strong>File-&gt;Open</strong> and select the PDB of your homology model.In main window, <strong>right-click-&gt;select-&gt;Hydrogens</strong>, and then the molecule will be pink, In <strong>right menu-&gt; Delete</strong>,<strong> Click File-&gt;Save</strong> to save a new PDB file without hydrogens . Exit MOE.</td>
+  </tr>
+</table>
+<p style="margin-top: 30px; text-align: right; font-size: 30px"><a href = "project1_1.html">Previous</a>  <a href = "project1_3.html">Next</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Project1_3</title>
+<script type="text/javascript"
+ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<style type="text/css">
+<!--
+#Layer0 {
+	margin-left: 120px;
+	margin-top:	auto;
+	margin-right: 120px;
+	margin-bottom:auto;
+}
+#Layer1 {
+	position:fixed;
+	width:200px;
+	height:115px;
+	z-index:1;
+	visibility: hidden;
+	left: 20%;
+	top: 20%;
+}
+#Layer2 {
+	position:fixed;
+	width:200px;
+	height:115px;
+	z-index:2;
+	visibility: hidden;
+	left:20%;
+	top:20%;
+}
+#Layer3 {
+	position:fixed;
+	width:200px;
+	height:115px;
+	z-index:3;
+	visibility: hidden;
+	left:20%;
+	top:20%;
+}
+#Layer4 {
+	position:fixed;
+	width:200px;
+	height:115px;
+	z-index:4;
+	visibility: hidden;
+	left:20%;
+	top:20%;
+}
+#Layer5 {
+	position:fixed;
+	width:200px;
+	height:115px;
+	z-index:5;
+	visibility: hidden;
+	left:20%;
+	top:20%;
+}
+#Layer6 {
+	position:fixed;
+	width:200px;
+	height:115px;
+	z-index:6;
+	visibility: hidden;
+	left:20%;
+	top:20%;
+}
+#Layer7 {
+	position:fixed;
+	width:200px;
+	height:115px;
+	z-index:7;
+	visibility: hidden;
+	left:20%;
+	top:20%;
+}
+#Layer8 {
+	position:fixed;
+	width:200px;
+	height:115px;
+	z-index:8;
+	visibility: hidden;
+	left:20%;
+	top:20%;
+}
+#Layer9 {
+	position:fixed;
+	width:200px;
+	height:115px;
+	z-index:8;
+	visibility: hidden;
+	left:20%;
+	top:20%;
+}
+body {
+	background-color: #EAE7DF;
+}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v6.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+//-->
+</script>
+</head>
+
+<body>
+<div id="Layer0">
+<h2>To get TOP and CRD with tLeap program of AMBER</h2>
+<p>AMBER requires three files to run. Two of these will be prepared in this step. The first is a topology file (*.top/*.prmtop), which contains all the information about the force field, including bonds, angles, torsions, charges, van der Walls, and atom types. The second is a coordinate file (*.crd/*.inpcrd), which contains the positions of all the atoms in Cartesian coordinate space. The tLeap program will be used to generate topology and coordinate files of your homology model from its pdb.</p>
+<p>Our previous homology-modeling was done on a local Mac, but the tLeap program was installed on the server, so we need to log in the server with command</p>
+<p> <strong>$ ssh CBCC_S@218.199.68.187</strong> Then you will be asked to input password:<strong>CBCC_S2019</strong>.The entered password will not be displayed! </p>
+<p>Also create your own folder on the server and name the folder with your name.</p>
+<p> For example, your name is Hakim, then you do as below: </p>
+<p><img src="hakim.png" width="516" height="139" /></p>
+<p>Then make a new directory named md_simulations</p>
+<p><img src="mk_md.PNG" width="517" height="172" /></p>
+<p>Then copy your homology_modeling PDB file to this folder with Linux command <strong>scp</strong>.</p>
+<table width="100%" border="0">
+  <tr>
+    <td width="20%" align="left" valign="top"><img src="tleap.png" width="210" height="48" onmousemove="MM_showHideLayers('Layer1','','show')" onmouseout="MM_showHideLayers('Layer1','','hide')" /></td>
+    <td width="80%" align="left" valign="top" bordercolor="#000000"><div id="Layer1"><img src="tleap.png" width="933" height="216" /></div>
+    Firsty we start the program by typing <strong>tleap</strong> in the terminal.</td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><img src="99ff.png" width="210" height="81" onmousemove="MM_showHideLayers('Layer2','','show')" onmouseout="MM_showHideLayers('Layer2','','hide')" /></td>
+    <td align="left" valign="top"><div id="Layer2"><img src="99ff.png" width="944" height="367" /></div>
+    Then we need to import the appropriate force field file, here we are using <strong>AMBER99</strong> force field.</td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><img src="gaff.png" width="213" height="40" onmousemove="MM_showHideLayers('Layer3','','show')" onmouseout="MM_showHideLayers('Layer3','','hide')" /></td>
+    <td align="left" valign="top"><div id="Layer3"><img src="gaff.png" width="931" height="180" /></div>
+    Import the force field file of an organic molecule again because the protein is organic.</td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><img src="sourcewater.png" width="212" height="89" onmousemove="MM_showHideLayers('Layer4','','show')" onmouseout="MM_showHideLayers('Layer4','','hide')" /></td>
+    <td align="left" valign="top"><div id="Layer4"><img src="sourcewater.png" width="930" height="394" /></div>
+    We also need to import the force field file of water, because here we use water as a solvent for the protein.</td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><img src="loadpdb.png" width="213" height="40" onmousemove="MM_showHideLayers('Layer9','','show')" onmouseout="MM_showHideLayers('Layer9','','hide')" /></td>
+    <td align="left" valign="top"><div id="Layer9"><img src="loadpdb.png" width="931" height="180" /></div>
+    Load pdb file.</td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><img src="addwater.png" width="214" height="53" onmousemove="MM_showHideLayers('Layer5','','show')" onmouseout="MM_showHideLayers('Layer5','','hide')" /></td>
+    <td align="left" valign="top"><div id="Layer5"><img src="addwater.png" width="931" height="235" /></div>
+    This step is to use water molecular force field to add water to the protein, ie solvate. This step is to use water molecular force field to add water to the protein, ie solvate. Here we add 8.0 \( \overset{\circ}{A} \) water box. </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><img src="save_file.png" width="215" height="155" onmousemove="MM_showHideLayers('Layer6','','show')" onmouseout="MM_showHideLayers('Layer6','','hide')" /></td>
+    <td align="left" valign="top"><div id="Layer6"><img src="save_file.png" width="599" height="435" /></div>
+      <p>The last step is to save the *.crd and *.top files. Since tleap is automatically hydrogenated for the protein, there are no special hydrogenation step in the steps. Finally exit tleap using <strong>quit</strong>. </p>
+      </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><img src="ambpdb.PNG" width="214" height="30" onmousemove="MM_showHideLayers('Layer7','','show')" onmouseout="MM_showHideLayers('Layer7','','hide')" /></td>
+    <td align="left" valign="top"><div id="Layer7"><img src="ambpdb.PNG" width="936" height="137" /></div>
+    If we want to see the PDB file after hydrogenation, it can be obtained by AMBER's ambpdb program. </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><img src="search_wat.png" width="215" height="184" onmousemove="MM_showHideLayers('Layer8','','show')" onmouseout="MM_showHideLayers('Layer8','','hide')" /></td>
+    <td align="left" valign="top"><div id="Layer8"><img src="search_wat.png" width="510" height="438" /></div>
+    The top portion of the PDB file contains the protein information, with the counterion and solvent information following below. Each of these sections is separated by a TER card. The fifth column of the file gives the residue numbers. Type <strong>/WAT</strong> to use the vi editor search command to jump down to the first occurence of a water molecule in the file. Here you can see where the protein residue numbers end and water residue numbers begin. Type <strong>:$</strong> to travel to the end of the file and get the final water residue number. Record your residue ranges.
+(Example) Protein: 1-131, Water: 132-4344 </td>
+  </tr>
+</table>
+<p style="margin-top: 30px; text-align: right; font-size: 30px"><a href = "project1_2.html">Previous</a>  <a href = "project1_4.html">Next</a></p>
+</div>
+</body>
+</html>

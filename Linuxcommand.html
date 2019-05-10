@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Linuxcommand</title>
+<style type="text/css">
+<!--
+.STYLE1 {font-family: Arial, Helvetica, sans-serif}
+body {
+	background-color: #EAE7DF;
+}
+h1 {
+	font-size: 50px;
+}
+h2 {
+	font-size: 40px;
+}
+h3 {
+	font-size: 30px;
+}
+p {
+	font-size: 25px;
+}
+.STYLE2 {font-family: Arial, Helvetica, sans-serif}
+#Layer1 {
+	margin: 0 auto;
+}
+#Layer2 {
+	margin-left: 120px;
+	margin-top:	auto;
+	margin-right: 120px;
+	margin-bottom:auto;
+	
+}
+-->
+</style>
+</head>
+
+<body>
+<div id="Layer1">
+  <h1 align="center" class="STYLE1"><span class="STYLE2">Linux command</span></h1>
+  <div class="STYLE2" id="Layer2" align="center">
+    <p align="left">Linux command can be executed on terminal, and here we will introduce some common commands, if you want to get more detailed tutorial, click <a href="http://www.linuxcommand.org/lc3_lts0040.php" target="_blank">here</a>! </p>
+    <h2 align="left">What is terminal?</h2>
+    <p align="left">It's a program called a terminal emulator. This is a program that opens a window and lets you interact with the commands.  There are a many of different terminal emulators you can use. </p>
+    <h2 align="left">Starting a terminal</h2>
+    <p align="left">On the Mac , please search "terminal" in the <strong>&quot;Launchpad&quot;</strong>, and then double click it. (See the red box below).</p>
+    <p align="left"><img src="Linux_command_01.png" alt="01" width="579" height="323" /></p>
+    <p align="left"><img src="linux_command_02.png" alt="02" width="583" height="436" /></p>
+    <p align="center">&nbsp;</p>
+    <p align="left">Here are some common commands!</p>
+    <h3 align="left">pwd</h3>
+    <p align="left">Print the absolute path of the directory you are working in using <strong>pwd</strong> command:</p>
+    <p align="left"><img src="Linux&#32;command_image026.jpg" alt="03"/></p>
+    <p align="left">Every time you log in to the Linux system(or the Mac OS X systen) ,You are located in the home directory. On most systems, your home directory will be called &quot;/home/your_user_name&quot;, but it can be anything according to the assignment of the system administrator. To list the files in the working directory, use the <strong>ls</strong> command:</p>
+    <p align="left"><img src="Linux&#32;command_image027.jpg" alt="04"/></p>
+    <h3 align="left">cd</h3>
+    <p align="left">You can use <strong>cd</strong> command to  change your working directory:</p>
+    <p align="left"><img src="Linux&#32;command_image028.jpg" alt="05"/></p>
+    <h3 align="left">cd pathname </h3>
+    <p align="left">Type <strong>cd</strong> followed by a <em>pathname</em> will change the working directory to the specific <em>pathname</em>. The &quot;.&quot; notation in <em>pathname</em> refers to the working directory itself and the &quot;..&quot; notation in <em>pathname</em> refers to the working directory's parent directory:</p>
+    <p align="left"><img src="Linux&#32;command_image029.jpg" alt="06"/></p>
+    <h3 align="left">mkdir</h3>
+    <p align="left">Make a new directory .</p>
+    <p align="left"><img src="Linux&#32;command_image030.jpg" alt="07"/></p>
+    <h3 align="left">touch</h3>
+    <p align="left">Create a new file .</p>
+    <p align="left"><img src="Linux&#32;command_image031.jpg" alt="08"/></p>
+    <h3 align="left">rm</h3>
+    <p align="left">Remove files or directories.</p>
+    <p align="left"><img src="Linux&#32;command_image032_0000.jpg" alt="09"/></p>
+    <p align="left">Or move files and directories to another location.</p>
+    <p align="left"><img src="Linux&#32;command_image035.jpg" alt="10"/></p>
+    <h3 align="left">scp</h3>
+    <p align="left"><strong>scp</strong> is the abbreviation of secure copy, <strong>scp</strong> is a secure remote file copy command based on ssh login under Linux system.</p>
+    <p align="left"><strong>a. </strong>Copy from local to remote: $ <em>scp local_file remote_username@remote_ip:remote_folder</em></p>
+    <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;Copy directory: $<em> scp -r local_folder remote_username@remote_ip:remote_folder</em></p>
+    <p align="left"><strong>b. </strong>Copy from remote to local: $<em>scp remote_username@remote_ip:remote_folder/remote_file local_folder</em></p>
+    <p align="left">In the example below, we first created a file named &quot;test.txt&quot; and then copy it to the<em> /home/xcwang/</em> directory of the remote host with IP address 218.199.68.187. </p>
+    <p align="left"><img src="Linux&#32;command_image041.jpg" alt="11" width="1211" height="390"/></p>
+    <p align="left">On the remote host, we can find the file we just copied. </p>
+    <p align="left"><img src="Linux&#32;command_image042.jpg" alt="12" width="1211" height="206"/></p>
+    <p align="left">Now, let's do a practice.</p>
+    <p align="left"> In the home directory, We create a folder named &quot;course&quot; with command &quot;mkdir course&quot;, and move the &quot;protein.pdb&quot; to the folder with command &quot;mv protein.pdb ./course&quot;. And then we change working directory with command &quot;cd course&quot;. And now,we rename the &quot;protein.pdb&quot; file to &quot;Protein.pdb&quot; with command &quot;mv protein.pdb Protein.pdb&quot;.</p>
+    <p align="left">What we should know is that the Linux command &quot;mv&quot; has two functions, moving files to other location or rename them.</p>
+    <p align="left"><img src="vi_practice.PNG" width="1208" height="335" /> </p>
+  </div>
+</div>
+</body>
+</html>
